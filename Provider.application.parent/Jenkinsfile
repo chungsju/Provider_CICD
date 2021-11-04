@@ -47,11 +47,11 @@ pipeline {
                  	   
                  	   sh "rm -rf /var/jenkins_home/workspace/kube_deploy/"
                  	   sh "mkdir /var/jenkins_home/workspace/kube_deploy/"
-                 	   sh "git clone https://github.com/chungsju/kube_deploy.git /var/jenkins_home/workspace/kube_deploy/.git"
+                 	   sh "git clone https://github.com/chungsju/kube_deploy.git /var/jenkins_home/workspace/kube_deploy/"
                  	   sh "cp -r Provider.application/target/classes/META-INF/fabric8/kubernetes/ /var/jenkins_home/workspace/kube_deploy/provider-kube/"
                  	   
                  	   
-                 	   //dir("/var/jenkins_home/workspace/kube_deploy/") {
+                 	   dir("/var/jenkins_home/workspace/kube_deploy/") {
                  	   	  sh "cd  /var/jenkins_home/workspace/kube_deploy/"
 		                   sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
 	                       
@@ -62,7 +62,7 @@ pipeline {
 	   
 							    sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/chungsju/kube_deploy.git HEAD:main')
 							}
-						//}
+						}
              //ghp_mpktfpXDRJN/*이건 패스워드*/ZFOuD95w35PyjNL0U3x1QHEGF
             }
         }
