@@ -52,7 +52,7 @@ pipeline {
                  	   
                  	   
                  	   dir("/var/jenkins_home/workspace/kube_deploy/") { 
-		                   sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
+		                   //sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
 	                       
 	                       sh "git add -f provider-kube"
 	                       sh "git config --global user.email 'chungsju@gmail.com'"
