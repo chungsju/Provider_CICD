@@ -11,7 +11,7 @@ spec:
         project: provider
     spec:
       containers:
-      - image: chungsju/provider
+      - image: chungsju/provider:${project.version}
         imagePullPolicy: Always
         name: provider
         env:
