@@ -48,14 +48,14 @@ pipeline {
                  	   sh "rm -rf /var/jenkins_home/workspace/kube_deploy/"
                  	   sh "mkdir /var/jenkins_home/workspace/kube_deploy/"
                  	   sh "git clone https://github.com/chungsju/kube_deploy.git /var/jenkins_home/workspace/kube_deploy/"
-                 	   sh "cp -r Provider.application/target/classes/META-INF/fabric8/kubernetes /var/jenkins_home/workspace/kube_deploy/provider-kube"
+                 	   sh "cp -r Provider.application/target/classes/META-INF/fabric8/kubernetes /var/jenkins_home/workspace/kube_deploy/yaml/provider-yaml"
                  	   
                  	   
                  	   dir("/var/jenkins_home/workspace/kube_deploy/") {
                  	   	   sh "cd  /var/jenkins_home/workspace/kube_deploy/"
 		                   //sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
 	                       
-	                       sh "git add -f provider-kube"
+	                       sh "git add -f yaml/provider-yaml"
 	                       sh "git config --global user.email 'chungsju@gmail.com'"
 	                       sh "git commit -m jenkins_build"
 	                       withCredentials([usernamePassword(credentialsId: '4172501e-c084-43bf-bff5-0dac2d1077d1', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
