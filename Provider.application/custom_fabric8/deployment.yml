@@ -25,7 +25,7 @@ spec:
           value: Docker
         ports:
         - containerPort: 8000
-  replicas: 8
+  replicas: 4
   selector:
     container: provider
     provider: fabric8
