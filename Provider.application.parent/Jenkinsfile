@@ -44,9 +44,9 @@ pipeline {
                  	   //sh "mvn  initialize fabric8:apply"
                  	   //sh "git clone https://github.com/chungsju/kube_deploy.git /var/jenkins_home/workspace/kube_deploy/.git"
                  	   sh "git config pull.rebase false"
-                 	   sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
-                       sh "cp -r Provider.application/target/classes/META-INF/fabric8/kubernetes/ /var/jenkins_home/workspace/kube_deploy/.git/provider-kube/"
-                       dir("/var/jenkins_home/workspace/kube_deploy/.git/") { 
+                 	   dir("/var/jenkins_home/workspace/kube_deploy/.git/") { 
+		                   sh "git pull https://github.com/chungsju/kube_deploy.git HEAD:main --allow-unrelated-histories"
+	                       sh "cp -r /var/jenkins_home/workspace/bwce-provider/.git/Provider.application/target/classes/META-INF/fabric8/kubernetes/ /var/jenkins_home/workspace/kube_deploy/.git/provider-kube/"
 	                       
 	                       sh "git add -f provider-kube"
 	                       sh "git config --global user.email 'chungsju@gmail.com'"
