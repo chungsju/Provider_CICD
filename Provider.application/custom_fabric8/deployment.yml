@@ -28,10 +28,10 @@ spec:
           value: Docker
         ports:
         - containerPort: 8000
-        livenessProbe:
+        readinessProbe:
           httpGet:
-          path: /provider
-          port: 8000
+             path: /provider
+             port: 8000
         initialDelaySeconds: 10
         periodSeconds: 3      
   replicas: 2
