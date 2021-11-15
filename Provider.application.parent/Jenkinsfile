@@ -59,7 +59,7 @@ pipeline {
 	                       sh "git add -f yaml/provider-yaml"
 	                       sh "git config --global user.email 'chungsju@gmail.com'"
 	                       sh "git commit -m jenkins_build"
-	                       withCredentials([usernamePassword(credentialsId: '22c64cfa-8acc-422f-8895-1d4200da88f7', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+	                       withCredentials([usernamePassword(credentialsId: '3dc09248-9c5c-433f-9b4f-2416cfd9a648', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
 	   
 							    sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/chungsju/kube_deploy.git HEAD:main')
 							} 
