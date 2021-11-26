@@ -79,65 +79,11 @@
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.APPNODE.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.DEPLOYMENTUNIT.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.HOST.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.MODULE.VERSION</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.CLOUD.PORT</packaging:name>
-      <packaging:type>xsd:int</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//sharedmodule//BW.MODULE.NAME</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>private</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
   </packaging:properties>
   <packaging:modules>
     <packaging:module>
       <packaging:symbolicName>Provider</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-appmodule</packaging:technologyType>
-      <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
-    </packaging:module>
-    <packaging:module>
-      <packaging:symbolicName>sharedmodule</packaging:symbolicName>
-      <packaging:technologyType>osgi-bundle,bw-sharedmodule</packaging:technologyType>
       <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
     </packaging:module>
   </packaging:modules>
